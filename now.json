@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "env": {
+    "MONGODB_URL": "here"
+  },
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@now/node-server"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/items",
+      "dest": "/server.js",
+      "methods": [
+        "GET"
+      ]
+    },
+    {
+      "src": "/items",
+      "dest": "/server.js",
+      "methods": [
+        "POST"
+      ]
+    }
+  ]
+}
